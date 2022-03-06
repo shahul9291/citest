@@ -4,9 +4,6 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '2')) 
     disableConcurrentBuilds() 
   }
-  triggers {
-    pollSCM('* * * * *')
-  }
   stages {
   
     stage('Stage1') {
